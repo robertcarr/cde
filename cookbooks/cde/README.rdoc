@@ -1,6 +1,15 @@
 = DESCRIPTION:
+Provides a standard development environment for creating RightScale Chef based cookbooks.
+
+The recipes here will do the following:
+- Copy your provided SSH private key into ~/.ssh.
+- Configure Git user information & Repo information.
+- Create a ~/.vimrc file to begin with.
+- Adjust your path to include RightScale's sandbox binaries at /opt/rightscale/sandbox/bin.
+- Populate your ~/.chef/knife.rb configuration file.
 
 = REQUIREMENTS:
+- You need to create your github repo first & provide the read-only URI to the RightScale input.
 
 = ATTRIBUTES:
 
