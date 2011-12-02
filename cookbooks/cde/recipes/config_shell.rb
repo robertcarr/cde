@@ -1,6 +1,10 @@
 # Add customized prompt & autocomplete for shell
 #
 
+template "/etc/motd" do
+  source "motd.erb"
+end
+
 template "~/.git_complete.sh" do
   source "git-completion.bash"
 end
