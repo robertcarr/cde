@@ -9,11 +9,15 @@ template "~/.vimrc" do
   source "vimrc.erb"
 end
 
-bash "Activate git prompt" do
+bash "Activate environment" do
   code <<-EOH
   echo "source ~/.git_complete.sh" >> ~/.bashrc
   echo export PS1='\u@\h:\w$(__git_ps1 " [\[\e[34;1m\]%s\[\e[0m\]]")\$ ' >> ~/.bashrc
   echo export GIT_PS1_SHOWDIRTYSTATE=true >> ~/.bashrc
   echo export GIT_PS1_SHOWUNTRACKEDFILES=true >> ~/.bashrc
+  echo export PATH=$PATH:/opt/rightscale/sandbox/bin >> ~/.bashrc
   EOH
 end
+
+
+  
