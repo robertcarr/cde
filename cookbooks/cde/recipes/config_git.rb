@@ -1,7 +1,7 @@
 # Install the basic git package and configuration template to
 # 
 
-package "git" do
+package "git-core" do
   action :install
 end
 
