@@ -5,7 +5,7 @@ package "git" do
   action :install
 end
 
-template "~/.gitconfig" do
+template "/root/.gitconfig" do
   source "gitconfig.erb"
 end
 

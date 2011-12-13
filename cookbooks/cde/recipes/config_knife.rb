@@ -1,4 +1,4 @@
-template "~/.chef/knife.rb" do
+template "/root/.chef/knife.rb" do
   source "knife.rb.erb"
 end
 
