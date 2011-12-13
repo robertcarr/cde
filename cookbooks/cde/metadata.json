@@ -20,7 +20,7 @@
   "replacing": {
   },
   "attributes": {
-    "cde/git/username": {
+    "git/username": {
       "display_name": "Git user name",
       "description": "Your full name used with git",
       "required": "required",
@@ -33,7 +33,7 @@
       "calculated": false,
       "type": "string"
     },
-    "cde/git/email": {
+    "git/email": {
       "display_name": "Git email address",
       "description": "Your email address used for git",
       "required": "required",
