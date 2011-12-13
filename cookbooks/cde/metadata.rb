@@ -10,4 +10,16 @@ recipe "cde::config_shell", "Configures a basic shell environment"
 recipe "cde::config_git", "Configures basic git environment"
 recipe "cde::config_knife", "Configures basic knife environment"
 
+attribute "cde/git/username"
+  :display_name => "Git user name",
+  :description => "Your full name used with git",
+  :required => true,
+  :recipes => [ "cde::config_git" ]
+
+attribute "cde/git/email"
+  :display_name => "Git email address",
+  :description => "Your email address used for git",
+  :required => true,
+  :recipes => [ "cde::config_git" ]
+ 
 
