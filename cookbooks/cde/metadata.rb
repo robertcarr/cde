@@ -14,11 +14,13 @@ attribute "git/username",
   :display_name => "Git user name",
   :description => "Your full name used with git",
   :required => true,
+  :type => "string",
   :recipes => [ "cde::config_git" ]
 
 attribute "git/email",
   :display_name => "Git email address",
   :description => "Your email address used for git",
+  :type => "string",
   :required => true,
   :recipes => [ "cde::config_git" ]
  
