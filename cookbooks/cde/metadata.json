@@ -1,32 +1,58 @@
 {
-  "dependencies": {
-  },
   "name": "cde",
+  "description": "Installs/Configures cde",
+  "long_description": "= DESCRIPTION:\nProvides a standard development environment for creating RightScale Chef based cookbooks.\n\nThe recipes here will do the following:\n- Copy your provided SSH private key into ~/.ssh.\n- Configure Git user information & Repo information.\n- Create a ~/.vimrc file to begin with.\n- Adjust your path to include RightScale's sandbox binaries at /opt/rightscale/sandbox/bin.\n- Populate your ~/.chef/knife.rb configuration file.\n\n= REQUIREMENTS:\n- You need to create your github repo first & provide the read-only URI to the RightScale input.\n\n= ATTRIBUTES:\n\n= USAGE:\n\n",
+  "maintainer": "YOUR_COMPANY_NAME",
   "maintainer_email": "YOUR_EMAIL",
-  "attributes": {
-  },
   "license": "All rights reserved",
-  "suggestions": {
-  },
   "platforms": {
   },
-  "maintainer": "YOUR_COMPANY_NAME",
-  "long_description": "= DESCRIPTION:\nProvides a standard development environment for creating RightScale Chef based cookbooks.\n\nThe recipes here will do the following:\n- Copy your provided SSH private key into ~/.ssh.\n- Configure Git user information & Repo information.\n- Create a ~/.vimrc file to begin with.\n- Adjust your path to include RightScale's sandbox binaries at /opt/rightscale/sandbox/bin.\n- Populate your ~/.chef/knife.rb configuration file.\n\n= REQUIREMENTS:\n- You need to create your github repo first & provide the read-only URI to the RightScale input.\n\n= ATTRIBUTES:\n\n= USAGE:\n\n",
-  "version": "0.0.1",
+  "dependencies": {
+  },
   "recommendations": {
   },
-  "recipes": {
-    "cde::config_knife": "Configures basic knife environment",
-    "cde::config_git": "Configures basic git environment",
-    "cde::config_shell": "Configures a basic shell environment"
-  },
-  "groupings": {
+  "suggestions": {
   },
   "conflicting": {
   },
+  "providing": {
+  },
   "replacing": {
   },
-  "description": "Installs/Configures cde",
-  "providing": {
-  }
+  "attributes": {
+    "cde/git/username": {
+      "display_name": "Git user name",
+      "description": "Your full name used with git",
+      "required": "required",
+      "recipes": [
+        "cde::config_git"
+      ],
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string"
+    },
+    "cde/git/email": {
+      "display_name": "Git email address",
+      "description": "Your email address used for git",
+      "required": "required",
+      "recipes": [
+        "cde::config_git"
+      ],
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string"
+    }
+  },
+  "groupings": {
+  },
+  "recipes": {
+    "cde::config_shell": "Configures a basic shell environment",
+    "cde::config_git": "Configures basic git environment",
+    "cde::config_knife": "Configures basic knife environment"
+  },
+  "version": "0.0.1"
 }
