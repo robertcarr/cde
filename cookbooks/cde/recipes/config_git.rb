@@ -17,7 +17,7 @@ end
 
 bash "Activate SSH" do
   code <<-EOH
-  ssh-add /root/.ssh/id_github
+  #ssh-add /root/.ssh/id_github
   EOH
 end
 
