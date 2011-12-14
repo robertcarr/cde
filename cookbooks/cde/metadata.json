@@ -8,6 +8,7 @@
   "platforms": {
   },
   "dependencies": {
+    "rs_utils": ">= 0.0.0"
   },
   "recommendations": {
   },
@@ -38,6 +39,19 @@
       "description": "Your email address used for git",
       "type": "string",
       "required": "required",
+      "recipes": [
+        "cde::config_git"
+      ],
+      "choice": [
+
+      ],
+      "calculated": false
+    },
+    "git/ssh_key": {
+      "display_name": "Git SSH key used for read/write access",
+      "description": "Git SSH key used for read/write access",
+      "required": "required",
+      "type": "string",
       "recipes": [
         "cde::config_git"
       ],

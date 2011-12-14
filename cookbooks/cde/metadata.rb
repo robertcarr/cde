@@ -30,6 +30,6 @@ attribute "git/email",
 attribute "git/ssh_key",
   :display_name => "Git SSH key used for read/write access",
   :description  => "Git SSH key used for read/write access",
-  :required     => false,
+  :required     => true,
   :type         => "string",
   :recipes      => [ "cde::config_git" ]
