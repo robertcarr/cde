@@ -6,6 +6,9 @@ long_description IO.read(File.join(File.dirname(__FILE__), 'README.rdoc'))
 version          "0.0.1"
 
 
+# Best practice includes using rs_utils_marker :begin|:end
+depends "rs_utils"
+
 recipe "cde::config_shell", "Configures a basic shell environment"
 recipe "cde::config_git", "Configures basic git environment"
 recipe "cde::config_knife", "Configures basic knife environment"
@@ -24,4 +27,9 @@ attribute "git/email",
   :required => true,
   :recipes => [ "cde::config_git" ]
  
-
+attribute "git/ssh_key",
+  :display_name => "Git SSH key used for read/write access",
+  :description  => "Git SSH key used for read/write access",
+  :required     => false,
+  :type         => "string",
+  :recipes      => [ "cde::config_git" ]
