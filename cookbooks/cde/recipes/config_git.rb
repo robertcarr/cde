@@ -13,6 +13,7 @@ end
 
 template "/root/.ssh/id_github" do 
   source "id_github.erb"
+  mode 0600
 end
 
 rs_utils_marker :end
