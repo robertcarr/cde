@@ -11,7 +11,7 @@ template "/root/.gitconfig" do
   source "gitconfig.erb"
 end
 
-template "/root/.ssh/id_github" do 
+template "/root/.ssh/id_rsa" do 
   source "id_github.erb"
   mode 0600
 end
