@@ -59,6 +59,19 @@
 
       ],
       "calculated": false
+    },
+    "git/git_repo": {
+      "display_name": "Git Repository",
+      "description": "Code to pull down to instance automatically",
+      "required": "optional",
+      "type": "string",
+      "recipes": [
+        "cde::config_git"
+      ],
+      "choice": [
+
+      ],
+      "calculated": false
     }
   },
   "groupings": {

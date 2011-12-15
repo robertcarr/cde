@@ -33,3 +33,11 @@ attribute "git/ssh_key",
   :required     => true,
   :type         => "string",
   :recipes      => [ "cde::config_git" ]
+
+
+attribute "git/git_repo",
+  :display_name => "Git Repository",
+  :description  => "Code to pull down to instance automatically",
+  :required     => false,
+  :type         => "string",
+  :recipes      => [ "cde::config_git" ]
