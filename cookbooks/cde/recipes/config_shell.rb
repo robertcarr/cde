@@ -23,6 +23,7 @@ bash "Activate environment" do
   echo export GIT_PS1_SHOWDIRTYSTATE=true >> /root/.bashrc
   echo export GIT_PS1_SHOWUNTRACKEDFILES=true >> /root/.bashrc
   echo export PATH=$PATH:/opt/rightscale/sandbox/bin >> /root/.bashrc
+  echo '[ -e "/root/.ssh/id_github" ] && ssh-add /root/.ssh/id_github' >> /root/.bashrc
   EOH
 end
 
