@@ -18,6 +18,15 @@ template "/root/.ssh/id_rsa" do
   mode 0600
 end
 
+bash "Disable HostKeyChecking" do
+  code <<-EOH
+  echo "host *" >> /root/.ssh/config
+  echo "StrictHostKeyChecking=no" >> /root/.ssh/config
+  chmod 0600 /root/.ssh/config
+  EOH
+end
+
+
 if node[:git][:git_repo]
   git "Deploy" do
     user "root"
