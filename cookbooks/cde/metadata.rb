@@ -12,6 +12,7 @@ depends "rs_utils"
 recipe "cde::config_shell", "Configures a basic shell environment"
 recipe "cde::config_git", "Configures basic git environment"
 recipe "cde::config_knife", "Configures basic knife environment"
+recipe "cde::config_chef", "Installs CHEF gem"
 
 attribute "git/username",
   :display_name => "Git user name",

@@ -79,7 +79,8 @@
   "recipes": {
     "cde::config_shell": "Configures a basic shell environment",
     "cde::config_git": "Configures basic git environment",
-    "cde::config_knife": "Configures basic knife environment"
+    "cde::config_knife": "Configures basic knife environment",
+    "cde::config_chef": "Installs CHEF gem"
   },
   "version": "0.0.1"
 }
