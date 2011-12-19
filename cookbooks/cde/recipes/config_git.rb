@@ -12,16 +12,20 @@ template "/root/.gitconfig" do
 end
 
 template "/root/.ssh/id_rsa" do 
+  user "root"
+  group "root"
   source "id_github.erb"
   mode 0600
 end
 
 if node[:git][:git_repo]
   git "Deploy" do
+    user "root"
+    group "root"
     repository node[:git][:git_repo]
     revision "master"
     action :checkout
-    destination "/opt/dev"
+    destination "/opt/development"
   end
 end
 
