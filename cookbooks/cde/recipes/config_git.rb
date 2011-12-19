@@ -17,12 +17,12 @@ template "/root/.ssh/id_rsa" do
 end
 
 if node[:git][:git_repo]
-#  git "Deploy" do
-#    repository node[:git][:git_repo]
-#    revision "master"
-#    action :checkout
-#    destination "/opt/dev"
-#  end
+  git "Deploy" do
+    repository node[:git][:git_repo]
+    revision "master"
+    action :checkout
+    destination "/opt/dev"
+  end
 end
 
 rs_utils_marker :end
