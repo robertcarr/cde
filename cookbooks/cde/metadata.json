@@ -2,8 +2,8 @@
   "name": "cde",
   "description": "Installs/Configures cde",
   "long_description": "= DESCRIPTION:\nProvides a standard development environment for creating RightScale Chef based cookbooks.\n\nThe recipes here will do the following:\n- Copy your provided SSH private key into ~/.ssh.\n- Configure Git user information & Repo information.\n- Create a ~/.vimrc file to begin with.\n- Adjust your path to include RightScale's sandbox binaries at /opt/rightscale/sandbox/bin.\n- Populate your ~/.chef/knife.rb configuration file.\n\n= REQUIREMENTS:\n- You need to create your github repo first & provide the read-only URI to the RightScale input.\n\n= ATTRIBUTES:\n\n= USAGE:\n\n",
-  "maintainer": "YOUR_COMPANY_NAME",
-  "maintainer_email": "YOUR_EMAIL",
+  "maintainer": "RightScale, Inc.",
+  "maintainer_email": "robert@rightscale.com",
   "license": "All rights reserved",
   "platforms": {
   },
@@ -63,6 +63,19 @@
     "git/git_repo": {
       "display_name": "Git Repository",
       "description": "Code to pull down to instance automatically",
+      "required": "optional",
+      "type": "string",
+      "recipes": [
+        "cde::config_git"
+      ],
+      "choice": [
+
+      ],
+      "calculated": false
+    },
+    "git/git_branch": {
+      "display_name": "Git branch",
+      "description": "Git branch to checkout",
       "required": "optional",
       "type": "string",
       "recipes": [

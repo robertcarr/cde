@@ -28,12 +28,11 @@ end
 
 
 if node[:git][:git_repo]
-  git "Deploy" do
+  git "/opt/development" do
     user "root"
     repository node[:git][:git_repo]
-    revision "master"
+    revision node[:git][:git_branch]
     action :checkout
-    destination "/opt/development"
   end
 end
 
