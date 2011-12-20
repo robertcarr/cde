@@ -27,6 +27,8 @@ bash "Disable HostKeyChecking" do
 end
 
 
+branch = node[:git][:git_repo] || "master"
+
 if node[:git][:git_repo]
   git "/opt/development" do
     user "root"
